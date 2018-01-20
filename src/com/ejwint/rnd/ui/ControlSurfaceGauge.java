@@ -83,8 +83,6 @@ public class ControlSurfaceGauge extends WidgetController {
                 text.setX(110);
                 text.setY(0);
                 text.getTransforms().add(rotate);
-//                text.setStyle("vertical");
-                text.setRotate(0);
                 this.getChildren().add(text);
 
             } else {
