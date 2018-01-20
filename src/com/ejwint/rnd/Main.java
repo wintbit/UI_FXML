@@ -1,5 +1,6 @@
 package com.ejwint.rnd;
 
+import com.ejwint.rnd.ui.ControlSurfaceGauge;
 import com.ejwint.rnd.ui.Gauge;
 import com.ejwint.rnd.ui.Gauge.GaugeTypeEnum;
 import javafx.application.Application;
@@ -27,11 +28,10 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         TabPane tabpane = new TabPane();
 
+        addTab(tabpane, "Control Surface", new ControlSurfaceGauge());
         addTab(tabpane, "Gauge: VERTICAL", new Gauge(100, 5, GaugeTypeEnum.VERTICAL));
         addTab(tabpane, "Gauge: VERTICAL_SPLIT", new Gauge(35, 5, GaugeTypeEnum.VERTICAL_SPLIT));
-
         addTab(tabpane, "Gauge: HORIZONTAL", new Gauge(35, 5, GaugeTypeEnum.HORIZONTAL));
-        
         Scene scene = new Scene(tabpane, 500, 500);
 
         primaryStage.setTitle("Hello World!");
